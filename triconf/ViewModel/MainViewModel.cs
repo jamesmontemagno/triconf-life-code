@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight;
+﻿using System.Collections.ObjectModel;
+using GalaSoft.MvvmLight;
 using triconf.Model;
 
 namespace triconf.ViewModel
@@ -13,35 +14,7 @@ namespace triconf.ViewModel
     {
         private readonly IDataService _dataService;
 
-        /// <summary>
-        /// The <see cref="WelcomeTitle" /> property's name.
-        /// </summary>
-        public const string WelcomeTitlePropertyName = "WelcomeTitle";
-
-        private string _welcomeTitle = string.Empty;
-
-        /// <summary>
-        /// Gets the WelcomeTitle property.
-        /// Changes to that property's value raise the PropertyChanged event. 
-        /// </summary>
-        public string WelcomeTitle
-        {
-            get
-            {
-                return _welcomeTitle;
-            }
-
-            set
-            {
-                if (_welcomeTitle == value)
-                {
-                    return;
-                }
-
-                _welcomeTitle = value;
-                RaisePropertyChanged(WelcomeTitlePropertyName);
-            }
-        }
+        public StandardDataSource DataSource { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
@@ -58,7 +31,9 @@ namespace triconf.ViewModel
                         return;
                     }
 
-                    WelcomeTitle = item.Title;
+                    DataSource = item;
+
+                    RaisePropertyChanged("DataSource");
                 });
         }
 
@@ -68,5 +43,12 @@ namespace triconf.ViewModel
 
         ////    base.Cleanup();
         ////}
+
+
+        public void ExecuteMoreInfoCommand(StandardDataItem item)
+        {
+           
+
+        }
     }
 }

@@ -7,13 +7,20 @@
              mc:Ignorable="d ignore"
              xmlns:vm="using:triconf.ViewModel">
 
+
+
     <Application.Resources>
+
         <ResourceDictionary>
             <!--Global View Model Locator-->
             <vm:ViewModelLocator x:Key="Locator"
                                  d:IsDataSource="True"
                                  xmlns="using:triconf.ViewModel" />
 
+
+
+            <SolidColorBrush x:Name="MidBarBrush">#FF0099cc</SolidColorBrush>
+            
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Skins/TriconfSkin.xaml" />
                 <!-- 
