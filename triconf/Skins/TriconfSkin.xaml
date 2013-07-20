@@ -14,16 +14,12 @@
             <callisto:LiveTile.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Image Stretch="Uniform" Margin="15" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Image, Converter={StaticResource VisibilityConverter}}">
+                       <Image Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Image, Converter={StaticResource VisibilityConverter}}">
                             <Image.Source>
                                 <BitmapImage UriSource="{Binding Image}" />
                             </Image.Source>
                         </Image>
-                        <TextBlock Text="{Binding Subtitle}" Grid.Row="0" Margin="15" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        <TextBlock Text="{Binding Subtitle}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
                                     Foreground="White" FontSize="74"
                                         FontWeight="Bold" TextWrapping="NoWrap"
                                     FontFamily="Segoe UI Light" />
@@ -47,11 +43,7 @@
             <callisto:LiveTile.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Image Stretch="Uniform" Margin="15" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Image, Converter={StaticResource VisibilityConverter}}">
+                        <Image Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Image, Converter={StaticResource VisibilityConverter}}">
                             <Image.Source>
                                 <BitmapImage UriSource="{Binding Image}" />
                             </Image.Source>
@@ -74,11 +66,7 @@
 
     <DataTemplate x:Key="HomeMenuDataTemplate">
         <Grid  callistoEffects:Tilt.IsTiltEnabled="True" Background="{StaticResource MidBarBrush}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Image Stretch="Uniform" Margin="15">
+            <Image Stretch="Uniform">
                 <Image.Source>
                     <BitmapImage UriSource="{Binding Image}" />
                 </Image.Source>

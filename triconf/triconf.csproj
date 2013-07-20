@@ -135,6 +135,7 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\triconf_logo.png" />
     <Content Include="Assets\triconf_logo_small.png" />
+    <Content Include="Assets\twitter_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
